@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Categories{% endblock %}
+{% block page %}categories{% endblock %}
+{% block content %}
+<form id="cat-form" class="panel form-row">
+  <label>Name<input name="name" required maxlength="80"></label>
+  <label>Description<input name="description" maxlength="255"></label>
+  <button class="btn" type="submit">Add Category</button>
+</form>
+<div id="cat-list"></div>
+{% endblock %}

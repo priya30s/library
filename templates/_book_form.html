@@ -1,0 +1,12 @@
+<form id="book-form" class="panel form-grid">
+  <label>Title<input name="title" required maxlength="200"></label>
+  <label>Author<input name="author" required maxlength="150"></label>
+  <label>ISBN<input name="isbn" required maxlength="20"></label>
+  <label>Category<select name="category_id" id="category"></select></label>
+  <label>Publisher<input name="publisher" maxlength="120"></label>
+  <label>Publish year<input name="publish_year" type="number" min="1000" max="2100"></label>
+  <label>Total copies<input name="total_copies" type="number" min="0" value="1" required></label>
+  <label class="full">Description<textarea name="description" rows="3"></textarea></label>
+  <div class="full"><button class="btn" type="submit">Save Book</button>
+    <a class="btn secondary" href="/books">Cancel</a></div>
+</form>

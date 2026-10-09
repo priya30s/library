@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Students{% endblock %}
+{% block page %}students{% endblock %}
+{% block content %}
+<form id="acct-form" class="panel form-grid">
+  <input type="hidden" name="pid">
+  <label>Full name<input name="full_name" required></label>
+  <label>Username<input name="username" required minlength="3"></label>
+  <label>Email<input name="email" type="email" required></label>
+  <label>Phone<input name="phone"></label>
+  <label>Roll no<input name="roll_no" required></label>
+  <label>Department<input name="department"></label>
+  <label>Password <small>(leave blank when editing to keep it)</small><input name="password" type="password" minlength="6" required></label>
+  <div class="full"><button class="btn" type="submit">Save Student</button>
+    <button class="btn secondary" type="button" id="acct-reset">Clear</button></div>
+</form>
+<div id="acct-list"></div>
+{% endblock %}

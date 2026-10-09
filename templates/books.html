@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Books{% endblock %}
+{% block page %}books{% endblock %}
+{% block content %}
+<div class="panel filters">
+  <input id="q" type="search" placeholder="Search by title, author or ISBN...">
+  <select id="category"></select>
+  <label class="check"><input id="available" type="checkbox"> Available only</label>
+  {% if session.role != 'student' %}<a class="btn" href="/books/add">+ Add Book</a>{% endif %}
+</div>
+<div id="book-list"></div>
+{% endblock %}

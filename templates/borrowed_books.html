@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ 'My Borrowed Books' if session.role == 'student' else 'Issue / Return Books' }}{% endblock %}
+{% block page %}borrowed_books{% endblock %}
+{% block content %}
+{% if session.role != 'student' %}
+<form id="issue-form" class="panel form-row">
+  <label>Student roll no<input name="roll_no" required placeholder="e.g. CS2024001"></label>
+  <label>Book<select name="book_id" id="issue-book" required></select></label>
+  <button class="btn" type="submit">Issue Book</button>
+</form>
+<div class="panel filters">
+  <label>Show
+    <select id="status-filter">
+      <option value="">All</option><option value="active">Currently borrowed</option>
+      <option value="overdue">Overdue</option><option value="return_requested">Return requested</option>
+      <option value="returned">Returned</option>
+    </select></label>
+</div>
+{% endif %}
+<div id="borrow-list"></div>
+{% endblock %}

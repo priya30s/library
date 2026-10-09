@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Library Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-page="login" class="login-body">
+  <form id="login-form" class="login-box">
+    <h1>📚 Library Management System</h1>
+    <p class="muted">Sign in to continue</p>
+    <label>Username<input name="username" required autofocus autocomplete="username"></label>
+    <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+    <button class="btn" type="submit">Login</button>
+    <p class="muted small-text">Demo: admin / admin123 &middot; librarian / lib123 &middot; student1 / student123</p>
+  </form>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

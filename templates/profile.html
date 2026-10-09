@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}My Profile{% endblock %}
+{% block page %}profile{% endblock %}
+{% block content %}
+<div class="panel" id="profile-info"></div>
+<div class="grid-2">
+  <form id="profile-form" class="panel form-grid single">
+    <h3 class="full">Edit details</h3>
+    <label>Full name<input name="full_name" required></label>
+    <label>Email<input name="email" type="email" required></label>
+    <label>Phone<input name="phone"></label>
+    <div class="full"><button class="btn" type="submit">Update Profile</button></div>
+  </form>
+  <form id="password-form" class="panel form-grid single">
+    <h3 class="full">Change password</h3>
+    <label>Current password<input name="current_password" type="password" required></label>
+    <label>New password<input name="new_password" type="password" minlength="6" required></label>
+    <div class="full"><button class="btn" type="submit">Change Password</button></div>
+  </form>
+</div>
+{% endblock %}

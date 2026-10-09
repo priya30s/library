@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Librarians{% endblock %}
+{% block page %}librarians{% endblock %}
+{% block content %}
+<form id="acct-form" class="panel form-grid">
+  <input type="hidden" name="pid">
+  <label>Full name<input name="full_name" required></label>
+  <label>Username<input name="username" required minlength="3"></label>
+  <label>Email<input name="email" type="email" required></label>
+  <label>Phone<input name="phone"></label>
+  <label>Employee ID<input name="employee_id" required></label>
+  <label>Password <small>(leave blank when editing to keep it)</small><input name="password" type="password" minlength="6" required></label>
+  <div class="full"><button class="btn" type="submit">Save Librarian</button>
+    <button class="btn secondary" type="button" id="acct-reset">Clear</button></div>
+</form>
+<div id="acct-list"></div>
+{% endblock %}
